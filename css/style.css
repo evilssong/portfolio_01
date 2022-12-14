@@ -888,8 +888,7 @@ table {
 }
 @media only screen and (max-width: 760px){
 	.m_cont .c2 {
-		margin-top: 50px;
-		height: 100%;
+		height: 600px;
 	}
 	.m_cont .c2 .c2_left .c2_resume .title {
 		font-size: 17px;
