@@ -722,10 +722,10 @@ table {
 		bottom: 1%;
 	}
 	.m_cont .c1 {
-		height: 285px;
+		height: 100%;
 	}
 	.m_cont .c1 .c1_Swiper .swiper-slide .c1_sw {
-		height: 235px;
+		height: 240px;
 	}
 	.m_cont .c1 .c1_sw .desc {
 		font-size: 13px;
@@ -889,7 +889,7 @@ table {
 @media only screen and (max-width: 760px){
 	.m_cont .c2 {
 		margin-top: 50px;
-		height: 600px;
+		height: 100%;
 	}
 	.m_cont .c2 .c2_left .c2_resume .title {
 		font-size: 17px;
@@ -1132,10 +1132,11 @@ table {
 @media only screen and (max-width: 760px){
 	.m_cont .c3 {
 		margin-top: 70px;
-		height: 350px;
+		height: 450px;
 	}
 	.m_cont .c3 .c3_cont {
-		height: 350px;
+		height: 450px;
+		justify-content: space-around;
 	}
 	.m_cont .c3 .c3_cont > .c3_maintitle {
 		font-size: 18px;
