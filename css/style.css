@@ -626,10 +626,6 @@ table {
 }
 
 /* 휠 영역 */
-#mainwheel {
-	width: 100%;
-	height: 100vh;
-}
 .m_dim {
 	position: absolute;
 	left: 0;
