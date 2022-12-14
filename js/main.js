@@ -192,7 +192,8 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}, 50);
 	});
-window.addEventListener("resize", function(){
+	window.addEventListener("resize", function(){
+		if(isMobile) return;
 		winW=window.innerWidth;
 		mainCategoryH=m_cont.offsetHeight;
 		init();
