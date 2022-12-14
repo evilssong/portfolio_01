@@ -1529,12 +1529,9 @@ table {
 	transform: rotate(0);
 	opacity:1;
 }
-@media(hover: hover) and (pointer: fine) {
-	#portfolio .inner .project .title_area .title a:hover {
-		color: #39CED6;
-	}
+#portfolio .inner .project .title_area .title a:hover {
+	color: #39CED6;
 }
-
 #portfolio .inner .project.active .title_area .title a {
 	color: #4096EE;
 }
