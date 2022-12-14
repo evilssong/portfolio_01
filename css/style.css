@@ -1522,14 +1522,15 @@ table {
 	transform-origin: 0 0;
 	transform: rotate(-360deg);
 	opacity: 0;
-	transition: transform 1s, opacity 1s;
-	transition-delay: 0.8s;
+	transition: transform 1s, opacity 1s, color 0.3s;
+	transition-delay: transform 0.8s, opacity 0.8s, color 0s;;
 }
 #portfolio.active .inner .project .title_area .title a {
 	transform: rotate(0);
 	opacity:1;
 }
 #portfolio .inner .project .title_area .title a:hover {
+	transition-delay: 0s;
 	color: #39CED6;
 }
 #portfolio .inner .project.active .title_area .title a {
