@@ -1940,6 +1940,9 @@ table {
 	#project1 {
 		margin-top: 104px;
 	}
+	#portfolio .inner .project .title_area .title a:hover .fas.fa-play {
+		background-color: #4096EE;
+	}
 	#portfolio .inner .project .title_area .title a .fas.fa-play {
 		left: 40px;
 		width: 52px;
