@@ -1522,7 +1522,7 @@ table {
 	transform-origin: 0 0;
 	transform: rotate(-360deg);
 	opacity: 0;
-	transition: 1s;
+	transition: transform 1s, opacity 1s;
 	transition-delay: 0.8s;
 }
 #portfolio.active .inner .project .title_area .title a {
