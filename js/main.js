@@ -417,12 +417,15 @@ window.addEventListener("DOMContentLoaded", function(){
 		if(deviceStatus=="mobile"){
 			if(window.pageYOffset > portfolio.offsetTop-10) {
 				header.classList.add("active");
+				mainN=4;
+				buttonActive();
 			}
 			else{
 				header.classList.remove("active");
 			}
 		}
 	});
+
 
 	let tab=document.querySelector(".tab");
 	let body=document.querySelector("body");
@@ -501,4 +504,24 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		});
 	}
+	m_cont.addEventListener("scroll", function(){
+		if(deviceStatus=="mobile"){
+			if(m_cont.scrollTop == 0){
+				mainN=0;
+				buttonActive();
+			}
+			if(m_cont.scrollTop > c2.offsetTop) {
+				mainN=1;
+				buttonActive();
+			}
+			if(m_cont.scrollTop > c3.offsetTop-100) {
+				mainN=2;
+				buttonActive();
+			}
+			if(m_cont.scrollTop > c4.offsetTop-100) {
+				mainN=3;
+				buttonActive();
+			}
+		}
+	});
 });
