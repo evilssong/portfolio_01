@@ -105,7 +105,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	let header=document.getElementById("header");
 	let pagedown=document.querySelector(".pagedown");
 	let project=document.getElementsByClassName("project");
-	let title_area=document.querySelectorAll(".title_area");
 
 	let poss;
 	let c1=document.querySelector(".c1")
@@ -125,6 +124,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	}
+	
 	function init(){
 		winH=window.innerHeight;
 		winW=window.innerWidth;
@@ -178,6 +178,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			indexWheelMoving();
 		}, 50);
 	});
+
 	portfolio.addEventListener("mousewheel", function(e){
 		if(deviceStatus == "mobile" || moving == true) return;
 
@@ -192,6 +193,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}, 50);
 	});
+
 	window.addEventListener("resize", function(){
 		if(isMobile) return;
 		winW=window.innerWidth;
@@ -250,6 +252,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 		buttonActive();
 	}
+
 	function pageScrollMoving(h){
 		moving=true;
 		gsap.to(portfolio, {scrollTo: 0 , duration: 0});
@@ -346,6 +349,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			sub_video.play();
 	});
 
+	// project list
 	let projectN=0;
 	for(let i=0; i < project.length; i++){
 		project[i].index=i;
@@ -370,6 +374,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		})
 	}
 
+	// contact, top button
 	let contact=document.querySelector(".contact");
 	let top=document.querySelector(".top");
 	let bottom;
@@ -413,20 +418,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	});
 
-	document.addEventListener("scroll", function(){
-		if(deviceStatus=="mobile"){
-			if(window.pageYOffset > portfolio.offsetTop-10) {
-				header.classList.add("active");
-				mainN=4;
-				buttonActive();
-			}
-			else{
-				header.classList.remove("active");
-			}
-		}
-	});
+	
 
-
+	// mobile tab
 	let tab=document.querySelector(".tab");
 	let body=document.querySelector("body");
 	tab.addEventListener("click", (e) => {
@@ -455,6 +449,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	});
 
+	// mobile menu
 	function m_scrollOffset(){
 		gsap.fromTo(gnb, {opacity:1, y: 0}, {opacity: 0, y:"-100%", duration: 1, onComplete: function() {
 			gsap.to(m_cont, {scrollTo: poss, duration: 0.4});
@@ -504,6 +499,20 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		});
 	}
+
+	// mobile scroll buttonActive
+	document.addEventListener("scroll", function(){
+		if(deviceStatus=="mobile"){
+			if(window.pageYOffset > portfolio.offsetTop-10) {
+				header.classList.add("active");
+				mainN=4;
+				buttonActive();
+			}
+			else{
+				header.classList.remove("active");
+			}
+		}
+	});
 	m_cont.addEventListener("scroll", function(){
 		if(deviceStatus=="mobile"){
 			if(m_cont.scrollTop == 0){
