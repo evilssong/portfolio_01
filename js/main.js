@@ -449,8 +449,44 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	});
 
+	// mobile scroll buttonActive
+	document.addEventListener("scroll", function(){
+		if(moving==true) return;
+
+		clearTimeout(timer);
+
+		timer=setTimeout(function(){
+			if(deviceStatus=="mobile"){
+				if(window.pageYOffset > portfolio.offsetTop-10) {
+					header.classList.add("active");
+					buttonActive(4);
+				}
+				else{
+					header.classList.remove("active");
+					buttonActive(3);
+				}
+			}
+		}, 10);
+	});
+	m_cont.addEventListener("scroll", function(){
+		if(deviceStatus=="mobile"){
+			if(m_cont.scrollTop == 0){
+				buttonActive(0);
+			}
+			if(m_cont.scrollTop > c2.offsetTop) {
+				buttonActive(1);
+			}
+			if(m_cont.scrollTop > c3.offsetTop-100) {
+				buttonActive(2);
+			}
+			if(m_cont.scrollTop > c4.offsetTop-100) {
+				buttonActive(3);
+			}
+		}
+	});
+
 	// mobile menu
-	function m_scrollOffset(){
+	function m_scrollOffset(h){
 		gsap.fromTo(gnb, {opacity:1, y: 0}, {opacity: 0, y:"-100%", duration: 1, onComplete: function() {
 			gsap.to(m_cont, {scrollTo: poss, duration: 0.4});
 			gsap.to(window, {scrollTo: 0, duration: 0.4});
@@ -465,13 +501,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		gnbLi[i].index=i;
 	
 		gnbLi[i].addEventListener("click", function(e){
+			moving=true;
 			e.preventDefault();
 			mainN=e.currentTarget.index;
-			buttonActive(mainN);
+			setTimeout(function(){
+				buttonActive(mainN);
+			}, 1500);
 			if(deviceStatus=="mobile"){
 				if(mainN==0){
 					poss=c1.offsetTop;
-					m_scrollOffset();
+					m_scrollOffset(0);
 				}
 				if(mainN==1){
 					poss=c2.offsetTop;
@@ -494,43 +533,10 @@ window.addEventListener("DOMContentLoaded", function(){
 						body.classList.remove("fixed");
 						project[0].classList.add("active");
 						project[1].classList.remove("active");
+						moving=false;
 					}});
 				}
 			}
 		});
 	}
-
-	// mobile scroll buttonActive
-	document.addEventListener("scroll", function(){
-		if(deviceStatus=="mobile"){
-			if(window.pageYOffset > portfolio.offsetTop-10) {
-				header.classList.add("active");
-				mainN=4;
-				buttonActive();
-			}
-			else{
-				header.classList.remove("active");
-			}
-		}
-	});
-	m_cont.addEventListener("scroll", function(){
-		if(deviceStatus=="mobile"){
-			if(m_cont.scrollTop == 0){
-				mainN=0;
-				buttonActive();
-			}
-			if(m_cont.scrollTop > c2.offsetTop) {
-				mainN=1;
-				buttonActive();
-			}
-			if(m_cont.scrollTop > c3.offsetTop-100) {
-				mainN=2;
-				buttonActive();
-			}
-			if(m_cont.scrollTop > c4.offsetTop-100) {
-				mainN=3;
-				buttonActive();
-			}
-		}
-	});
 });
