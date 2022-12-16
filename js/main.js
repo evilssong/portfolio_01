@@ -447,7 +447,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	// mobile scroll buttonActive
 	document.addEventListener("scroll", function(){
 		if(moving==true) return;
-		console.log("1,", moving);
 
 		clearTimeout(timer);
 
@@ -502,7 +501,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 		gnbLi[i].addEventListener("click", function(e){
 			moving=true;
-			console.log(moving)
 			e.preventDefault();
 			mainN=e.currentTarget.index;
 			setTimeout(function(){
