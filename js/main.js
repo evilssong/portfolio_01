@@ -136,8 +136,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		setTimeout(function(){
 			gsap.to(window, {scrollTo: 0, duration: 0.5});
 			gsap.to(m_cont, {scrollTo: 0, duration: 0.5})
-			mainN=0;
-			indexWheelMoving();
+			indexWheelMoving(mainN=0);
 		}, 50);
 
 		if(winW > 760){
@@ -258,13 +257,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		gsap.to(portfolio, {scrollTo: 0 , duration: 0});
 		if(h == 0){
 			gsap.to(window, {scrollTo: 0, duration: 0.4, onComplete: function(){
-				mainN=3;
-				indexWheelMoving(3)
+				indexWheelMoving(mainN=3)
 				moving=false;
 				header.classList.remove("active");
 				project[0].classList.add("active");
 				project[1].classList.remove("active");
-				buttonActive();
 				mainWheelAble=true;
 			}});
 		}
@@ -402,8 +399,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	});
 	top.addEventListener("click", function(e){
 		e.preventDefault();
-		mainN=0;
-		indexWheelMoving(mainN);
+		indexWheelMoving(mainN=0);
 		header.classList.remove("active");
 		project[0].classList.add("active");
 		project[1].classList.remove("active");
