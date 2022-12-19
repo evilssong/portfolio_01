@@ -1579,7 +1579,7 @@ table {
 	transform: translateY(100%);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
-	transition-delay: 1.5s;
+	transition-delay: 1s;
 }
 #portfolio.active .inner .project .title_area .content ul li:nth-child(1) {
 	transform: translateY(0);
@@ -1589,7 +1589,7 @@ table {
 	transform: translateY(100%);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
-	transition-delay: 2s;
+	transition-delay: 1.5s;
 }
 #portfolio.active .inner .project .title_area .content ul li:nth-child(2) {
 	transform: translateY(0);
@@ -1599,7 +1599,7 @@ table {
 	transform: translateY(100%);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
-	transition-delay: 2.5s;
+	transition-delay: 2s;
 }
 #portfolio.active .inner .project .title_area .content ul li:nth-child(3) {
 	transform: translateY(0);
@@ -1609,7 +1609,7 @@ table {
 	transform: translateY(100%);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
-	transition-delay: 3s;
+	transition-delay: 2.5s;
 }
 #portfolio.active .inner .project .title_area .content ul li:nth-child(4) {
 	transform: translateY(0);
