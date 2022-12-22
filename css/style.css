@@ -477,6 +477,15 @@ table {
 	color: #fff;
 	font-weight: 100;
 }
+#header .hcopy {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	z-index: 100;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 100;
+}
 @keyframes pagedown {
 	0% {
 		transform: translateY(-10px);
@@ -2078,6 +2087,16 @@ table {
 	display: inline-block;
 	width: 80px;
 	font-weight: 700;
+}
+#footer .ftcopy {
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	transform: translateX(-50%);
+	z-index: 100;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 100;
 }
 @media only screen and (max-width: 1000px) {
 	#footer .inner .title h2 {
